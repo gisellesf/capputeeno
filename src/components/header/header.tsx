@@ -1,4 +1,4 @@
-'use client';
+'use client'
 
 // ** React Imports
 import React from 'react'
@@ -11,20 +11,20 @@ import styled from 'styled-components';
 import { PrimaryInputSearchIcon } from './primary-input';
 import CartControl from './cart-control';
 
+// ** Imports Interface
+import { HeaderProps } from '@/interfaces/header-props';
+
 const saira_stencil = Saira_Stencil_One({
   weight: ['400'],
   subsets: ['latin']
 })
-
-interface HeaderProps {
-
-}
 
 const TagHeader = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px 160px;
+
 
   > div{
     display: flex;
