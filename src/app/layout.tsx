@@ -1,16 +1,15 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Saira } from 'next/font/google'
-import StyledComponentsRegistry from './lib/registry'
-
+import RootStyleRegistry from './RootStyleRegistry'
 
 const saira = Saira({
   weight: ['300', '400', '500', '600', '700'],
   subsets: ['latin']
 })
 
-import Header from '@/components/header/header'
-import { FilterContextProvider } from '@/contexts/filter-context'
+import Header from '@/components/header/Header'
+import { FilterContextProvider } from '@/contexts/Filter-Context'
 
 export const metadata: Metadata = {
   title: 'Capputeeno',
@@ -26,10 +25,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={saira.className}>
         <FilterContextProvider>
-          <StyledComponentsRegistry>
+          <RootStyleRegistry>
             <Header />
             {children}
-          </StyledComponentsRegistry>
+          </RootStyleRegistry>
         </FilterContextProvider>
       </body>
     </html>

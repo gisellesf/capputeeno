@@ -1,5 +1,5 @@
 import styles from './page.module.css'
-import FilterBar from '@/components/filter-bar/filter-bar'
+import FilterBar from '@/components/filter-bar/Filter-Bar'
 
 export default function Home() {
   return (
