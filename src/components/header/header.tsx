@@ -5,14 +5,14 @@ import React from 'react'
 import { Saira_Stencil_One } from 'next/font/google'
 
 // ** Styled Components Imports
-import styled from 'styled-components';
+import { styled } from 'styled-components';
 
 // ** Imports Components
-import { PrimaryInputSearchIcon } from './primary-input';
-import CartControl from './cart-control';
+import { PrimaryInputSearchIcon } from './Primary-Input';
+import CartControl from './Cart-Control';
 
 // ** Imports Interface
-import { HeaderProps } from '@/interfaces/header-props';
+import { HeaderProps } from '@/interfaces/Header-Props';
 
 const saira_stencil = Saira_Stencil_One({
   weight: ['400'],
@@ -48,6 +48,7 @@ function Header(props: HeaderProps) {
       <div>
         <PrimaryInputSearchIcon      
           placeholder='Procurando por algo específico?'
+          name='search'
         />
         <CartControl/>
       </div>

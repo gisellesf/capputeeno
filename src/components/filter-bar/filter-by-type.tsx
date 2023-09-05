@@ -1,14 +1,14 @@
 'use client'
 
 // ** Import React
-// import React from 'react'
+import React from 'react'
 
 // ** Import Styled Componets 
-import styled from 'styled-components'
-import { FilterType } from '@/contexts/filter-context';
+import { styled } from 'styled-components'
+import { FilterTypes } from '@/contexts/Filter-Context';
 
 // ** Import Interface
-import { FilterByTypeProps } from '@/interfaces/filter-type-props'
+import { FilterByTypeProps } from '@/interfaces/Filter-Type-Props'
 
 // ** Import hooks
 import { useFilter } from '@/hooks/useFilter';
@@ -40,25 +40,25 @@ export function FilterByType() {
 
   const { type, setType } = useFilter();
 
-  const handleChangeType = (value: FilterType) => {
+  const handleChangeType = (value: FilterTypes) => {
     setType(value)
   }
 
   return (
     <FilterList>
       <FilterItem
-        selected={type === FilterType.ALL}
-        onClick={() => handleChangeType(FilterType.ALL)}>
+        selected={type === FilterTypes.ALL}
+        onClick={() => handleChangeType(FilterTypes.ALL)}>
         Todos os produtos
       </FilterItem>
       <FilterItem
-        selected={type === FilterType.SHIRT}
-        onClick={() => handleChangeType(FilterType.SHIRT)}>
+        selected={type === FilterTypes.SHIRT}
+        onClick={() => handleChangeType(FilterTypes.SHIRT)}>
         Camisetas
       </FilterItem>
       <FilterItem
-        selected={type === FilterType.MUG}
-        onClick={() => handleChangeType(FilterType.MUG)}>
+        selected={type === FilterTypes.MUG}
+        onClick={() => handleChangeType(FilterTypes.MUG)}>
         Canecas
       </FilterItem>
     </FilterList>

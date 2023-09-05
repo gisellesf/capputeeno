@@ -4,10 +4,10 @@
 import React, { InputHTMLAttributes } from 'react'
 
 // ** Styled Components Imports
-import styled from 'styled-components';
+import { styled } from 'styled-components';
 
 // ** Components Imports
-import { SearchIcon } from './svg/search-icon';
+import { SearchIcon } from '@/svg/Search-Icon';
 
 export const PrimaryInput = styled.input`
   background-color: var(--bg-secundary);
